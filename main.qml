@@ -1,6 +1,9 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import Wallet 1.0
+import QtQuick3D 1.15
+import QtQuick 2.15
+import "qrc:/asset_imports/Quick3DAssets/Coin/"
 
 Item {
     id: element
@@ -31,11 +34,11 @@ Item {
         id: buttonSync
         x: 252
         y: 231
-        enabled: wal.address
+        enabled: wal.connectionState == Wallet.Connected
         text: qsTr("synchro")
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        onClicked: cpp.getWallet(wal.address)
+        onClicked: cpp.getWallet(wal)
     }
 
     Button {
@@ -45,7 +48,7 @@ Item {
         anchors.top: buttonSync.bottom
         anchors.topMargin: 15
         anchors.horizontalCenter: parent.horizontalCenter
-        enabled: !wal.address
+        enabled: wal.connectionState == Wallet.NotConnected
         onClicked: {inputDial.funcState = 0 ;inputDial.open(); inputDial.textInput.focus = true}
     }
     Button {
@@ -55,20 +58,35 @@ Item {
         anchors.top: buttonLogin.bottom
         anchors.topMargin: 15
         anchors.horizontalCenter: parent.horizontalCenter
-        enabled: !wal.address
+        enabled: wal.connectionState == Wallet.NotConnected
         onClicked: {inputDial.funcState = 1 ;inputDial.open(); inputDial.textInput.focus = true}
     }
-    InputTextDialog {
+
+
+
+
+    LoginDialog {
         id: inputDial
         property int funcState: 0
         width: parent.width
-        y: parent.height/2
-        onAccepted: (funcState == 0) ? cpp.loginWallet(textInput.text) : cpp.generateWallet(textInput.text);
+        height: parent.height/2
+        y: (parent.height - height)/2
+        onAccepted: (funcState == 0) ? cpp.checkConnection(textInput.text, passwordInput.text) : cpp.generateWallet(textInput.text, passwordInput.text);
     }
+
+    TokenSelector {
+        id: tokenSelector
+        x: 0
+        y: 541
+        width: 480
+        height: 219
+    }
+
+
 }
 
 /*##^##
 Designer {
-    D{i:2;anchors_height:211;anchors_width:480}D{i:4;anchors_y:238}
+    D{i:0;active3dScene:-1}D{i:2}D{i:4}
 }
 ##^##*/
