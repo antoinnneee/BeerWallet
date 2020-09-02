@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml3D/GraphicalToken.qml</file>
+        <file>qml3D/MtCoin.qml</file>
+        <file>qml3D/RawGraphicalToken.qml</file>
+        <file>coin/coinTextureV3.png</file>
+        <file>coin/coinTextureV3_I.png</file>
+        <file>coin/mtCoin.png</file>
+        <file>coin/mtCoin_I.png</file>
+        <file>coin/NormalMap1.png</file>
+    </qresource>
+</RCC>

@@ -3,5 +3,9 @@
         <file>main.qml</file>
         <file>WalletView.qml</file>
         <file>InputTextDialog.qml</file>
+        <file>LoginDialog.qml</file>
+        <file>PayBox.qml</file>
+        <file>TokenSelector.qml</file>
+        <file>CoinTextureTester.qml</file>
     </qresource>
 </RCC>

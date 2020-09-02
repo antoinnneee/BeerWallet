@@ -1,0 +1,13 @@
+INPUT(
+./debug/httpResponse.o
+./debug/jwtbuilder.o
+./debug/main.o
+./debug/qmlapp.o
+./debug/qmlappfunc.o
+./debug/qmlappview.o
+./debug/wallet.o
+./debug/moc_jwtbuilder.o
+./debug/moc_qmlapp.o
+./debug/moc_wallet.o
+./debug/qrc_qml.o
+);

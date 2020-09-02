@@ -10,7 +10,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include "wallet.h"
-
+#include "jwtbuilder.h"
 class qmlApp : public QQuickView
 {
     Q_OBJECT
@@ -21,23 +21,33 @@ public:
     ~qmlApp() override;
 
     enum ViewPage{
-        MainPage
+        MainPage,
+        GraphicTest
     };
 
 
 public slots:
     void    handleChecker(int val);
     void    handleWallet(QObject *obj);
-    void    getWallet(QString walletAddress);
-    void    generateWallet(QString secret);
-    void    loginWallet(QString username);
+    void    getWallet(Wallet *wallet);
+    void    generateWallet(QString username, QString password);
+    void    loginWallet(QString username, QString password);
+    void    checkConnection(QString username, QString password);
+    void    reloadGraph();
+
+
 
 private slots:
     void    viewChanger(ViewPage id);
     void    loadMain();
-    void    replyFinished();
+    void    loadGraphic();
+    void    replyWalletContent();
     void    receiveChangeAddresse();
     void    errorChangeAddresse(QNetworkReply::NetworkError);
+
+    void    sendCheckConnection(QByteArray hashUser, QByteArray hashPass);
+    void    checkConnectionResult();
+
 
 signals:
     void changeAddress(QString);
@@ -49,6 +59,7 @@ private:
     Wallet *m_wallet;
     const QString serveurAddress= "http://wallet.cb4tech.fr:8000/BeerDrink/";
 //    const QString serveurAddress= "http://127.0.0.1:8000/BeerDrink/";
+    JwtBuilder m_jwtBuilder;
 };
 
 #endif // QMLAPP_H

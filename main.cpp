@@ -6,8 +6,11 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    QGuiApplication app(argc, argv);
-    qmlApp ap;
+    const int RESTART_CODE = 1000;
+    int returnCode = 0;
+        QGuiApplication app(argc, argv);
+        qmlApp ap;
+        returnCode = app.exec();
 
-    return app.exec();
+    return 0;
 }
