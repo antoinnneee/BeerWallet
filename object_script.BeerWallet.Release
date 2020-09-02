@@ -1,0 +1,13 @@
+INPUT(
+./release/httpResponse.o
+./release/jwtbuilder.o
+./release/main.o
+./release/qmlapp.o
+./release/qmlappfunc.o
+./release/qmlappview.o
+./release/wallet.o
+./release/moc_jwtbuilder.o
+./release/moc_qmlapp.o
+./release/moc_wallet.o
+./release/qrc_qml.o
+);

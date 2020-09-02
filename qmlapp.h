@@ -21,7 +21,8 @@ public:
     ~qmlApp() override;
 
     enum ViewPage{
-        MainPage
+        MainPage,
+        GraphicTest
     };
 
 
@@ -32,10 +33,14 @@ public slots:
     void    generateWallet(QString username, QString password);
     void    loginWallet(QString username, QString password);
     void    checkConnection(QString username, QString password);
+    void    reloadGraph();
+
+
 
 private slots:
     void    viewChanger(ViewPage id);
     void    loadMain();
+    void    loadGraphic();
     void    replyWalletContent();
     void    receiveChangeAddresse();
     void    errorChangeAddresse(QNetworkReply::NetworkError);

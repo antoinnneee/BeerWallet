@@ -1,9 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import Wallet 1.0
-import QtQuick3D 1.15
 import QtQuick 2.15
-import "qrc:/asset_imports/Quick3DAssets/Coin/"
 
 Item {
     id: element
@@ -74,19 +72,49 @@ Item {
         onAccepted: (funcState == 0) ? cpp.checkConnection(textInput.text, passwordInput.text) : cpp.generateWallet(textInput.text, passwordInput.text);
     }
 
-    TokenSelector {
-        id: tokenSelector
-        x: 0
-        y: 541
-        width: 480
-        height: 219
+
+
+    TextField {
+        id: textField
+        x: 325
+        y: 720
+        width: 155
+        height: 40
+        text: "1"
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        anchors.rightMargin: 0
+        placeholderText: qsTr("1")
     }
+
+    TextField {
+        id: textField1
+        x: 164
+        y: 720
+        width: 155
+        height: 40
+        text: "1"
+        anchors.right: textField.left
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: 6
+        anchors.bottomMargin: 0
+        placeholderText: qsTr("1")
+    }
+
+    //    TokenSelector {
+    //        id: tokenSelector
+//        x: 0
+//        y: 541
+//        width: 480
+//        height: 219
+//    }
 
 
 }
 
 /*##^##
 Designer {
-    D{i:0;active3dScene:-1}D{i:2}D{i:4}
+    D{i:0;active3dScene:"-1"}
 }
 ##^##*/

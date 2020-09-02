@@ -6,35 +6,6 @@
         <file>LoginDialog.qml</file>
         <file>PayBox.qml</file>
         <file>TokenSelector.qml</file>
-        <file>coin/coin-texture.jpg</file>
-        <file>coin/coin.blend</file>
-        <file>coin/coin.fbx</file>
-        <file>coin/gold.jpg</file>
-        <file>coin/img1.png</file>
-        <file>coin/img2.png</file>
-        <file>coin/img3.png</file>
-        <file>asset_imports/Quick3DAssets/Coin/qmldir</file>
-        <file>asset_imports/Quick3DAssets/Coin/Coin.hints</file>
-        <file>asset_imports/Quick3DAssets/Coin/Coin.qml</file>
-        <file>asset_imports/Quick3DAssets/Coin/meshes/cylinder.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/dirt.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/dirt02.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf006_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf007.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf02_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf03_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf05_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf_008.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf_009.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf_010.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/leaf_011.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/lef04_000.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/moh.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/pot.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/meshes/stem.mesh</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/Node01Alocasia_obj.hints</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/Node01Alocasia_obj.qml</file>
-        <file>asset_imports/Quick3DAssets/_1Alocasia_obj/qmldir</file>
+        <file>CoinTextureTester.qml</file>
     </qresource>
 </RCC>

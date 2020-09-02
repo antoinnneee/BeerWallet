@@ -70,6 +70,15 @@ void qmlApp::checkConnection(QString username, QString password)
     sendCheckConnection(userHash, hashpass);
 }
 
+#include <QProcess>
+void qmlApp::reloadGraph()
+{
+
+    qApp->quit();
+    QProcess::startDetached(qApp->arguments()[0], QStringList());
+//    viewChanger(GraphicTest);
+}
+
 void qmlApp::loginWallet(QString username, QString password)
 {
     m_wallet->setHashPassword(QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha256).toHex());
